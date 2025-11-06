@@ -1,0 +1,153 @@
+/* Reset básico e fonte */
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, Arial, sans-serif;
+  background: #f0f4ff;
+  color: #333;
+  padding: 20px;
+}
+
+/* Container centralizado */
+.container {
+  max-width: 820px;
+  margin: 36px auto;
+  padding: 20px;
+}
+
+/* Card principal */
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(13,38,76,0.08);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Título e descrição */
+.card h1 {
+  margin: 0;
+  color: #1e3a8a;
+  font-size: 26px;
+}
+
+.card p {
+  color: #555;
+  margin-top: 6px;
+}
+
+/* Formulário */
+.form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Inputs de Nome, Email e perguntas */
+.form input,
+.question input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  margin-bottom: 12px;
+  font-size: 14px;
+  box-sizing: border-box;
+  height: 40px;
+  line-height: normal;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: all 0.2s;
+}
+
+.form input:focus,
+.question input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+/* Logo upload */
+.logo-upload {
+  margin-top: 12px;
+}
+
+.logo-upload img {
+  max-height: 60px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  padding: 2px;
+}
+
+/* Botão */
+button {
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Flex para inputs Nome/Email */
+.flex-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.flex-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Espaçamento entre botões e textos */
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mensagem de feedback */
+.msg {
+  margin-top: 12px;
+  background: #f3f4f6;
+  padding: 10px;
+  border-radius: 8px;
+  color: #333;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .flex-row {
+    flex-direction: column;
+  }
+
+  .space-between {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
